@@ -20,6 +20,8 @@ public class ParkingSpotModel implements Serializable {
     @Column(nullable = false, length = 70)
     private String brandCar;
     @Column(nullable = false, length = 70)
+    private String modelCar;
+    @Column(nullable = false, length = 70)
     private String colorCar;
     @Column(nullable = false)
     private LocalDateTime registrationDate;
@@ -29,6 +31,8 @@ public class ParkingSpotModel implements Serializable {
     private String apartment;
     @Column(nullable = false, length = 30)
     private String block;
+
+
 
     public UUID getId() {
         return id;
@@ -61,6 +65,8 @@ public class ParkingSpotModel implements Serializable {
     public void setBrandCar(String brandCar) {
         this.brandCar = brandCar;
     }
+    public String getModelCar() { return modelCar; }
+    public void setModelCar(String modelCar) { this.modelCar = modelCar; }
 
     public String getColorCar() {
         return colorCar;
